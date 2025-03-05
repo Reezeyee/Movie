@@ -1,0 +1,1021 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    position: fixed;
+    top: 0;
+    left: 0;  
+    right: 0; 
+    width: 100%;
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*Body*/
+body {
+    margin-top: 80px; 
+    background-color: #292929;
+    color: #ffffff;
+}
+
+header .logo {
+    margin: 0;
+}
+
+header .logo img {
+    max-height: 80px; 
+    filter: brightness(0) invert(1);
+}
+
+header .main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start; 
+    margin-left: 50%;
+
+}
+
+/*navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; 
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, transform 0.3s; 
+}
+
+nav ul li a:hover {
+    color: #ff6600; 
+    transform: scale(1.05); /
+}
+
+/* Featured section*/
+.featured h1 {
+    text-align: center;
+    color: #f39c12;
+    margin-bottom: 20px; 
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.featured {
+    background-color: #292929; 
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.featured img {
+    width: 300px;
+    height: auto; 
+    border-radius: 8px;
+    margin-right: 30px;
+    margin-left: 10%;
+}
+
+.featured .movie-info- img {
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.featured .movie-info- img:hover {
+    transform: scale(1.1); 
+    opacity: 0.9; 
+}
+
+.movie-info- {
+    display: flex;
+    align-items: flex-start;
+}
+
+.featured .info {
+    flex: 1;
+    margin-left: 3%; 
+    color: white; 
+}
+
+.featured .info p {
+    font-size: 1.2em; 
+    margin-top: 10px; 
+}
+
+.featured .info p {
+    margin-top: 10px;
+}
+
+.info h2 {
+    color: #f39c12; 
+    font-size: 35px; 
+    font-weight: bold; 
+}
+
+.price {
+    color: #f39c12;
+}
+
+.featured .info ul {
+    list-style-type: none; 
+    padding: 0;  
+    margin: 0;   
+}
+
+.more-info-button {
+    display: inline-block;
+    background-color: #f39c12; 
+    color: white;
+    padding: 12px 24px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    font-size: 14px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.more-info-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05); 
+}
+
+/*Rental Section*/
+.rental {
+    text-align: right; 
+    margin-top: 50px;
+}
+
+.info {
+    padding: 15px;
+    background-color: rgba(88, 87, 87, 0.4); 
+    border-radius: 8px; 
+}
+
+
+.index #rental-dialog {
+    display: none;
+}
+
+.index #rental-dialog.show {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.index .container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px; 
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: relative; 
+    text-align: center; 
+    color: black;
+}
+
+.index .ui {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+.index .ui a {
+    text-decoration: none; 
+    font-size: 1.5em; 
+    color: #333; 
+}
+
+.index .ui a:hover {
+    color: #e74c3c; 
+}
+
+.index #close-rental-dialog:target ~ #rental-dialog {
+    display: none; 
+}
+
+.rental-steps {
+    margin-top: -3%;
+}
+
+.rent-now.button {
+    display: inline-block; 
+    background-color: #f39c12;
+    color: white; 
+    padding: 14px 26px;
+    text-decoration: none; 
+    border-radius: 5px; 
+    margin-left: -14px; 
+    font-size: 23px; 
+}
+
+.rent-now.button:hover {
+    background-color: #e67e22; 
+}
+
+.rental .rent-now {
+    transform: translateY(-150%); 
+}
+
+.rental-steps ul {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+.rental .rental-steps h3 {
+    font-size: 14px; 
+    margin-top: -30px; 
+}
+
+.rental .rental-steps ul {
+    margin-top: -12px; 
+    font-size: 10px; 
+}
+
+
+/* Upcoming movies Section */
+section.upcoming {
+    margin-top: 40px;
+}
+
+.up-coming h2 { 
+    color: #f39c12; 
+    font-size: 36px; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+}
+
+.movies-list {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.movies-list li {
+    flex: 1;
+    text-align: center; 
+}
+
+.movie-cover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.movie-cover img {
+    width: 180px; 
+    height: auto;
+    border-radius: 8px;
+}
+
+.movie-cover:hover {
+    transform: scale(1.1); 
+}
+
+.movie-cover figcaption {
+    margin-top: 10px;
+    font-size: 18px; 
+    color: #ffffff; 
+    font-weight: bold;
+}
+
+/* Comment section*/
+.recent-comments {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin-top: 20px;
+    color: #ffffff; 
+}
+
+.recent-comments h2 {
+    font-size: 28px; 
+    color: #ff6600; 
+    margin-bottom: 15px; 
+    text-align: center; 
+}
+
+.comment {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 15px; 
+    border-radius: 8px; 
+    transition: background-color 0.3s ease; 
+}
+
+.comment:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.comment .name {
+    font-weight: bold; 
+    color: #f39c12;
+}
+
+.comment .movie-name a {
+    color: #ff6600; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.comment .movie-name a:hover {
+    text-decoration: underline; 
+}
+
+.comment .content {
+    margin: 10px 0; 
+}
+
+.comment time {
+    font-size: 12px; 
+    color: #cccccc; 
+    display: block; 
+    margin-top: 10px; 
+}
+
+/* Watch home section */
+.watch-at-home {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px 0; 
+    text-align: center;
+}
+
+.watch-at-home h2 {
+    color: #f39c12; 
+    font-size: 28px;
+    font-weight: bold; 
+    margin-bottom: 15px; 
+}
+
+.watch-at-home p {
+    color: #333; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    margin-bottom: 10px; 
+}
+
+.browse-all-movies-button {
+    display: inline-block; 
+    background-color: #f39c12;
+    color: white; /*text color*/
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px; 
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.browse-all-movies-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background-color: #292929; 
+    color: white;/*contrast*/
+    padding: 20px 10%; 
+    text-align: left;
+}
+
+/* Help section */
+.footer-help {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-help > div {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-help > div:last-child {
+    margin-right: 0;
+}
+
+.footer-help h4 {
+    margin-bottom: 10px; 
+    color: #f39c12;
+}
+
+.footer-help input[type="email"],
+.footer-help input[type="text"] {
+    padding: 10px; 
+    border: 1px solid #ddd; /*Light border*/
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.footer-help input[type="submit"] {
+    background-color: #f39c12;
+    color: white; /*Button*/
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-help input[type="submit"]:hover {
+    background-color: #e67e22;
+}
+
+.back-to-top {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.back-to-top a {
+    color: #f39c12; 
+    text-decoration: none;
+    font-weight: bold; 
+}
+
+.back-to-top a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.footer-nav {
+    text-align: center; 
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0; 
+}
+
+.footer-nav ul li {
+    display: inline; 
+    margin: 0 10px; 
+}
+
+.footer-nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+    color: #f39c12;
+}
+
+
+/* ALL-MOVIES SECTION */
+.all-movies {
+    margin-top: 15vh;
+    padding: 10px;
+    text-align: center;
+}
+
+.all-movies h1 {
+    color: #f39c12;           
+    font-size: 4em;            
+    font-weight: bold;         
+    margin-top: 18px;            
+    margin-bottom: 13px;         
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;      
+    padding: 20px;             
+    display: inline-block;    
+}
+  
+.all-movies .movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.all-movies .movies-list li {
+    margin: 20px;
+    width: 300px;
+}
+
+.all-movies .movie-info- {
+    background-color: #292929; 
+    border-radius: 8px; 
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s;
+}
+
+.all-movies .movie-info-:hover {
+    transform: scale(1.05);
+}
+
+.all-movies .movie-info- img {
+    width: 100%; 
+    height: auto; 
+    border-bottom: 3px solid #f39c12;
+}
+
+.all-movies .info {
+    padding: 15px;
+    color: white;
+    background-color: rgba(88, 87, 87, 0.4);
+    border-radius: 0 0 8px 8px;
+}
+
+.all-movies .info h2 {
+    color: #f39c12;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.all-movies .info p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.all-movies .price {
+    color: #f39c12;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.all-movies .more-info-button {
+    display: inline-block;
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.all-movies .more-info-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+.all-movies .info ul {
+    padding: 0;
+    list-style: none;
+}
+
+.all-movies .info ul li {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+/*Movie Section */
+.movie .yield .alert.label {
+    display: none;
+  }
+
+.movie section {
+    text-align: center; 
+    position: relative; 
+}
+
+.movie .movie-info- {
+    display: flex;             
+    flex-direction: column;     
+    align-items: center;       
+    justify-content: center;   
+    text-align: center;          
+    position: relative;       
+}
+
+.movie .movie-info- ul {
+    list-style-type: none; 
+    padding: 0;         
+    margin: 0;          
+}
+
+.movie .movie-info- img {
+    width: 300px;              
+    height: auto;              
+    border-radius: 8px;          
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.movie section h1 {
+    position: absolute; 
+    bottom: 51.8%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0; 
+    padding: 5px 15px; 
+    color: #f39c12; 
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px; 
+    display: inline-block; 
+    max-width: 90%; 
+    text-align: center; 
+   
+}
+
+
+.movie .rental {
+    display: flex;         
+    justify-content: center;
+    margin-top: 20px;       
+    text-align: center;    
+}
+
+.movie .rent-now {
+    background-color: #f39c12; 
+    color: white;               
+    padding: 10px 20px;        
+    text-decoration: none;     
+    border-radius: 5px;        
+    font-size: 1.2em;         
+    transition: background-color 0.3s; 
+    display: inline-block;     
+    margin: 0 auto;  
+    margin-top: 70px;           
+}
+
+.movie .rent-now:hover {
+    background-color: #e67e22; 
+}
+
+.movie #rental-dialog {
+    display: none;
+}
+
+.movie #rental-dialog.show {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.movie .container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: relative; 
+    text-align: center;
+    color: black;
+}
+
+.movie .ui {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+.movie .ui a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #333; 
+}
+
+.movie .ui a:hover {
+    color: #e74c3c;
+}
+
+/*'X' button's closing behavior*/
+.movie #close-rental-dialog:target ~ #rental-dialog {
+    display: none;
+}
+
+.movie .photo-gallery {
+    display: flex;              
+    justify-content: center;    
+    margin-top: 20px;            
+}
+
+.movie .photos-list {
+    list-style-type: none;    
+    padding: 0;                
+    margin: 0;                  
+    display: flex;             
+    gap: 10px;                  
+}
+
+.movie .photos-list li {
+    display: flex;
+}
+
+.movie .photos-list img {
+    max-width: 300px;           
+    height: auto;               
+    border-radius: 5px;        
+}
+
+.movie .related-movies {
+    margin: 40px 0;             
+}
+
+.movie .related-movies h2 {              
+    color: #f39c12;                  
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: inline-block;           
+    padding: 10px 20px;              
+    border-radius: 8px;              
+    margin: 0 auto 20px auto;        
+    font-size: 2rem;              
+}
+
+.movie .related-movies ul {
+    list-style-type: none;           
+    padding: 0;                      
+    margin: 0;                       
+    display: flex;                   
+    justify-content: center;         
+    gap: 30px;                    
+}
+
+.movie .related-movies li {
+    display: flex;                   
+    flex-direction: column;          
+    align-items: center;             
+    text-align: center;              
+    border: 2px solid rgba(0, 0, 0, 0.5); 
+    border-radius: 8px;              
+    padding: 10px;                   
+    background-color: rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s;   
+}
+
+.movie .related-movies li:hover {
+    transform: scale(1.05);         
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+.movie .related-movies img {
+    max-width: 100%;               
+    height: auto;                    
+    border-radius: 5px;            
+}
+
+.movie .related-movies figcaption {
+    margin-top: 5px;               
+    color: #fff;                     
+}
+
+/* About Section */
+section .about {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: Arial, sans-serif; 
+    color: #f39c12; 
+    margin: 20px auto; 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px; 
+    text-align: center; 
+}
+
+.about article p {
+    display: none;
+}
+
+.about h1{
+    text-align: center;
+    margin: 50px 0 10px 0; 
+    color: #f39c12;
+    font-size: 3rem;
+    font-weight: bold; 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.locations {
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 40px;
+    border-radius: 10px; 
+    margin: 20px auto; 
+    max-width: 1000px; 
+    text-align: center;
+}
+
+.locations h2 {
+    font-size: 2.5rem;
+    margin: 30px 0; 
+    color: #f39c12;
+}
+
+.locations p {
+    margin: 30px 0; 
+    color: #ffffff; 
+}
+
+.locations ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.store-location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0;
+}
+
+.store-location .map img {
+    width: 500px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.address, .tel {
+    text-align: center; 
+    margin: 0; 
+    color: #ffffff;
+}
+
+.tel a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.tel a:hover {
+    text-decoration: underline;
+}
+
+/*Contact us section*/
+.contact .yield {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f39c12;
+    border-radius: 10px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding-top: 50px; 
+}
+
+.contact .yield h1{
+    font-size: 3rem; 
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+}
+
+.tabs a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    border: none;
+    border-bottom: none;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tabs a:hover {
+    background-color: black;
+}
+
+.tabs a.active {
+    background-color:  #ff6600;
+    border-radius: 20px;
+}
+
+.tab-content {
+    display: none;
+    padding: 50px;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.contact .yield form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact .yield fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact .yield label {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+.contact .yield input[type="text"],
+.contact .yield  input[type="email"],
+.contact .yield  input[type="range"],
+.contact .yield  textarea {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.contact .yield textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact .yield input[type="submit"] {
+    padding: 10px 20px;
+    background-color:  #ff6600;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact .yield input[type="submit"]:hover {
+    background-color: #f39c12;
+}
+
+.contact .yield input[type="range"] {
+    width: 100%;
+}
+
+output {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.tab-content h2 {
+    font-size: 24px;
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+.tab-content p {
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+.success, .alert {
+    display: none;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
